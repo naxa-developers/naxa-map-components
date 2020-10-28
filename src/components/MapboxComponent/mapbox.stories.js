@@ -9,6 +9,7 @@ import Marker from '../Marker/Marker';
 import Choropleth from '../Choropleth/Choropleth';
 import Legend from '../Legend/Legend';
 import VectorTile from '../VectorTile/VectorTile'
+import LayerOpacityControl from '../LayerOpacityControl'
 storiesOf('Mapbox', module)
   .addDecorator(withKnobs)
   .add('Default', () => (
@@ -47,5 +48,10 @@ storiesOf('Mapbox', module)
   .add('With VectorTile', () => (
     <MapboxComponent>
       <VectorTile/>
+    </MapboxComponent>
+  ))
+  .add('WMS Layer Control', () => (
+    <MapboxComponent>
+    <LayerOpacityControl />
     </MapboxComponent>
   ));
